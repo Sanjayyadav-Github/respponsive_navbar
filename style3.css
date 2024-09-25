@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to bottom, rgb(223, 1, 1), blue);
+    width: 100%;
+    height: 100vh;
+}
+header {
+    position: relative;
+}
+
+nav {
+    height: 70px;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(224, 224, 224);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav .logo-head h1{
+    font-size: 1.7rem;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav .nav-list ul {
+    display: flex;
+}
+nav .nav-list ul a li{
+    list-style: none;
+    font-size: 1rem;
+    margin: 0 35px;
+}
+nav .nav-list ul a .hamburger{
+   display: none;
+}
+nav .nav-list ul a{
+   text-decoration: none;
+   color: white;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menusContainer{
+    height: 65vh;
+    width: 195px;
+    display: flex;
+    /* border: 2px solid black; */
+    justify-content: space-between;
+
+}
+.menusContainer .closeIcon a i{
+        font-size: 1.3rem;
+        margin: 30px 15px 0 0;
+}
+.hamburger-list {
+    height: 70vh;
+    width: 200px;
+    background-image: linear-gradient(to bottom, rgb(198, 17, 17), rgb(76, 26, 224));
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    animation: showHamburgerList 0.3s linear ease-in-out;
+}
+@keyframes showHamburgerList {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 30%;
+    }
+    
+}
+
+.hamburger-list ul a li{
+    list-style: none;
+    font-size: 1.3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 30px 10px 50px 20px;
+    color: white;
+}
+.hamburger-list ul a {
+    text-decoration: none;
+    color: white;
+}
+
+@media(max-width: 1024px) {
+    nav .logo-head h1{
+        font-size: 1.5rem;
+    }
+    nav .nav-list ul a li{
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 930px) {
+    nav .logo-head h1{
+        font-size: 1.3rem;
+        margin-left: 20px;
+    }
+    nav .nav-list ul a li{
+        margin: 0 25px;
+        font-size: 0.8rem;
+    }
+ 
+}
+
+@media (max-width: 768px) {
+    nav{
+        height: 95px;
+    }
+    nav .logo-head h1{
+        font-size: 1.4rem;
+        margin-left: 15px;
+    }
+    nav .nav-list ul a li{
+        display: none;
+    }
+    nav .nav-list ul a .hamburger{
+        margin-left: 450px;
+        font-size: 1.5rem;
+        display: block;
+     }
+   
+}
+@media (max-width: 690px) {
+    nav .logo-head h1{
+        font-size: 1.2rem;
+        margin-left: 15px;
+    }
+    nav .nav-list ul a .hamburger{
+        margin-left: 180px;
+        font-size: 1.5rem;
+     }
+
+    
+}
+
+    
+
